@@ -3,6 +3,7 @@
   padding: 0px;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  background-color: var(--bg-main-color);
 }
 
 :root {
