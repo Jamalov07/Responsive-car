@@ -36,6 +36,10 @@ header {
   background-color: transparent;
 }
 
+.nav .menu {
+  display: none;
+}
+
 .nav {
   display: flex;
   justify-content: space-between;
@@ -107,7 +111,7 @@ header {
 }
 
 .intro__title {
-  font-family: "Echo semibolt";
+  font-family: "Exo SemiBold";
   font-style: normal;
   font-weight: 600;
   font-size: 36px;
@@ -115,7 +119,7 @@ header {
 }
 
 .intro__subtitle {
-  font-family: "Echo semibolt";
+  font-family: "Exo SemiBold";
   font-style: normal;
   font-weight: 600;
   font-size: 24px;
@@ -182,12 +186,14 @@ header {
 
 .about {
   width: 100%;
-  height: 432px;
+  min-height: 432px;
+  /* background-color: #fff; */
 }
 
 .about-tech {
   display: flex;
   justify-content: space-between;
+  min-height: 372px;
   /* align-items: center; */
 }
 
@@ -267,7 +273,8 @@ header {
 /* ===============card ==============*/
 
 .popular {
-  padding: 72px 48px;
+  padding: 72px 0 48px 0;
+  /* background-color: #fff; */
 }
 
 .popular-title {
@@ -296,6 +303,7 @@ header {
   flex-direction: column;
   align-items: center;
   position: relative;
+  overflow: hidden;
 }
 
 .popular-card-title {
@@ -376,8 +384,8 @@ header {
 .popular-card::before {
   content: "";
   position: absolute;
-  width: 190px;
-  height: 190px;
+  width: 290px;
+  height: 290px;
   left: -44px;
   top: -38px;
 
@@ -416,8 +424,17 @@ header {
 
 /* =========================== */
 
+.features-con {
+  /* background-color: rgb(240, 43, 43); */
+  min-height: 713px;
+  background-color: #000;
+  overflow: hidden;
+}
+
 .features {
   position: relative;
+  background-color: #fff !important;
+  height: auto;
 }
 
 .image-alone {
@@ -486,9 +503,11 @@ header {
   top: 470px;
 }
 
+/* luxury section start */
 .luxury {
-  margin-top: 900px;
   text-align: center;
+  /* background-color: #fff; */
+  padding: 72px 0;
 }
 
 .luxury-cards {
@@ -497,6 +516,7 @@ header {
   flex-wrap: wrap;
   justify-content: space-between;
 }
+
 .luxury-title {
   margin: 20px;
 }
@@ -614,10 +634,13 @@ header {
 }
 
 .fon-uchun {
-  background: url(../images/yolgiz3back.jpg);
+  background-color: #fff;
+  padding: 72px 0 56px 0;
+  background-image: url(../images/subscribe-bg.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+  width: 100%;
 }
 
 .offers {
@@ -650,20 +673,25 @@ header {
 
 /* =================== */
 
+.brands {
+  background-color: rgb(0, 0, 0) !important;
+}
+
+.logos {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  object-fit: cover;
+  /* background-color: #fff; */
+  padding: 72px 0;
+}
+
 .logo-list {
   list-style-type: none;
   display: flex;
   justify-content: space-around;
   width: 100%;
   align-items: center;
-}
-
-.logos {
-  margin-top: 72px;
-  margin-bottom: 72px;
-  align-items: center;
-  display: flex;
-  justify-content: center;
 }
 
 .logo-img {
@@ -678,6 +706,7 @@ header {
   align-items: start;
   justify-content: space-between;
   margin: 60px 0px;
+  overflow: hidden;
 }
 
 .footer-info {
@@ -697,9 +726,13 @@ header {
   list-style-type: none;
 }
 
+.footer-item {
+  margin: 12px 0px;
+}
+
 .footer-item-link {
   text-decoration: none;
-  margin: 40px 0px;
+
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -721,12 +754,14 @@ header {
   font-size: 12px;
   line-height: 140%;
   color: #888b91;
+  margin: 98px;
 }
 
 footer {
   padding-bottom: 40px;
   position: relative;
   height: 395px;
+  overflow: hidden;
 }
 
 footer::before {
@@ -747,8 +782,342 @@ footer::after {
   width: 400px;
   height: 400px;
   left: -24px;
-  top: -137px;
+  top: -37px;
 
   background: rgba(55, 74, 109, 0.5);
   filter: blur(90px);
+}
+
+.alone3-none {
+  display: none;
+}
+
+/* ============================Responsive ============================ */
+
+@media only screen and (max-width: 360px) {
+  .container {
+    max-width: 312px;
+  }
+
+  .nav__list {
+    display: none;
+    height: 56px;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .intro__info {
+    /* max-width: 296px; */
+    width: 100%;
+  }
+
+  .popular-cards {
+    flex-wrap: wrap;
+  }
+
+  .intro__info--item img {
+    width: 25px;
+    height: 25px;
+    margin-bottom: 5px;
+  }
+
+  .intro__title {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 140%;
+
+    color: #ffffff;
+  }
+
+  .intro__subtitle {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 140%;
+  }
+
+  .wrapper span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .text {
+    font-size: 20px;
+  }
+
+  .info__text {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 13px;
+    color: #888b91;
+    margin-bottom: 4px;
+  }
+
+  .about-image img {
+    width: 312px;
+    height: 208px;
+  }
+
+  .popular-card {
+    margin-bottom: 20px;
+  }
+
+  .offers {
+    flex-direction: column;
+    /* justify-content: center; */
+  }
+
+  .alone3 {
+    width: 300px;
+  }
+
+  .about .container {
+    padding: 0;
+  }
+
+  .about-tech {
+    flex-direction: column;
+  }
+
+  .about-info {
+    max-width: 312px;
+    width: 100%;
+  }
+
+  .about-image {
+    position: relative;
+    height: 250px;
+    width: 320px;
+  }
+
+  .about-image-info {
+    /* bottom: -100px; */
+    right: 0;
+    top: 160px;
+    width: 181px;
+    height: 95px;
+  }
+
+  .about-info-title {
+    max-width: 174px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 140%;
+  }
+
+  .about-info-description {
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 140%;
+    color: #babec4;
+  }
+
+  .popular-title {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 140%;
+    text-align: center;
+    color: #f1f2f3;
+  }
+
+  .items {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .luxury-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .intro::before {
+    width: 0px;
+  }
+
+  /* ========== */
+
+  .features-con {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .features {
+    width: 100%;
+  }
+  .image-alone {
+    width: 150px;
+    height: 346.89px;
+    left: 25%;
+    position: absolute;
+  }
+
+  .features .back {
+    width: 450.06px;
+    height: 488.44px;
+    position: absolute;
+    left: -70px;
+    top: 70px;
+  }
+
+  .luxury {
+    padding: 0px;
+  }
+
+  .luxury-cards {
+    gap: 20px 0px;
+    padding-bottom: 48px;
+    width: 100%;
+  }
+
+  .offers {
+    padding: 0px;
+    align-items: center;
+    width: 320px;
+    overflow: hidden;
+  }
+
+  .offers-con {
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+  }
+  .fon-uchun {
+    padding-top: 58px 0px 32px !important;
+    overflow: hidden;
+  }
+
+  .offers-info {
+    width: 100%;
+    height: auto;
+    gap: 32px 0px;
+    align-items: center;
+  }
+  .offers-about {
+    width: 312px;
+    height: 63px;
+    font-family: "Exo";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 140%;
+    text-align: center;
+    color: #babec4;
+  }
+
+  .offers .btn {
+    margin: 10px auto;
+    font-weight: 500;
+    font-size: 15px;
+    width: 167px;
+    height: 49px;
+    padding: 14px 32px;
+    background: #4177dc;
+    border-radius: 4px;
+  }
+
+  .offers-info-title {
+    width: 312px;
+    height: 56px;
+    font-family: "Exo";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 140%;
+    text-align: center;
+    color: #f1f2f3;
+  }
+
+  .offers-image {
+    height: auto;
+    width: 360px;
+    background: #fff;
+  }
+  .alone3 {
+    display: none;
+  }
+
+  .alone3-none {
+    display: block;
+    background: transparent;
+  }
+
+  .brands .container {
+    padding: 0px;
+    background: #ffff;
+    height: auto;
+    width: 100%;
+  }
+
+  .logos {
+    height: auto;
+    padding: 56px 0px;
+  }
+
+  .logo-list {
+    height: auto;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    flex-direction: row;
+  }
+
+  .logo-list-item {
+    width: 30%;
+  }
+
+  .footer-elements {
+    height: auto;
+    flex-wrap: wrap;
+    align-items: start;
+    gap: 30px 0px;
+  }
+
+  .footer-info {
+    width: 100%;
+  }
+  .footer-nav {
+    width: 100%;
+  }
+  .social {
+    width: 100%;
+  }
+
+  .social h3 {
+    padding:0px;
+  }
+
+  .social img{
+    margin: 10px 10px 10px 0px;
+  }
+  footer {
+    height: auto;
+  }
+
+  .end {
+    font-size: 12px;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+  }
+
+  footer::after {
+    width: 300px;
+    height: 300px;
+    top: 160px;
+    left: -70px;
+  }
+
+  footer::before {
+    width: 300px;
+    height: 300px; 
+    left:180px;
+    top:560px;
+  }
 }
